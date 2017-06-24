@@ -1,10 +1,27 @@
 # Rails App Templates
 
-Modular Ruby on Rails app templates with reusable prompts, and integration with [skeletons](https://github.com/acobster/rails-skeletons) for granular file-level overrides.
+Modular Ruby on Rails app templates with reusable prompts, and integration with [rails-skeletons](https://github.com/acobster/rails-skeletons) for granular file-level overrides.
 
 ## Usage
 
+Tell rails-skeletons where to find the skeleton directories:
+
+```bash
+# ~/.skeletons
+SKELETONS_PATH=/path/to/your/skeletons
+```
+
+Optionally tell Rails to automatically load your custom app template:
+
+```bash
+# ~/.railsrc
+--template /path/to/my_fancy_app_template.rb
+```
+
+Finally, set up your custom app template:
+
 ```ruby
+# my_fancy_app_template.rb
 require_relative 'util/app_template_helper.rb'
 
 replace_readme do
