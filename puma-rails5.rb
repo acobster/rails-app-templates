@@ -66,7 +66,7 @@ after_bundle do
   rails_command 'db:migrate'
   rails_command 'db:test:prepare'
   rails_command 'db:seed'
-  run 'npm install' if yes?('install npm dependencies? (y/n)')
+  run 'yarn install' if yes?('install npm dependencies (using yarn)? (y/n)')
   git :init
   git add: '--all'
   git commit: '-m initial'
