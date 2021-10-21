@@ -34,24 +34,18 @@ overwrite_with_skeleton = prompt_for_skeleton
 replace_gemfile do
   add_source 'https://rubygems.org'
 
-  gem 'rails', '~> 5.1'
-  gem 'sqlite3', '~> 1.3'
-  gem 'puma', '~> 3.7'
-  gem 'bcrypt', '~> 3.1'
-  gem 'slim-rails', '~> 3.1'
-  gem 'dotenv', '~> 2.2'
-  gem 'rails_admin', '~> 1.2'
-  gem 'listen', '~> 3.1'
-  gem 'cancancan', '~> 1.10'
-  gem 'devise', '~> 4.3'
+  gem 'rails', '~> 5.2'
+  gem 'sqlite3'
+  gem 'puma'
+  gem 'bcrypt'
+  gem 'slim-rails'
+  gem 'rails_admin'
+  gem 'cancancan'
+  gem 'devise'
 
   gem_group :development, :test do
-    gem 'byebug', '~> 9.0'
-    gem 'rspec-rails', '~> 3.6'
-    gem 'webmock', '~> 3.0'
-    gem 'vcr', '~> 3.0'
-    # TODO y
-    #gem 'capybara-webkit', '~> 1.14'
+    gem 'listen'
+    gem 'minitest'
   end
 end
 
